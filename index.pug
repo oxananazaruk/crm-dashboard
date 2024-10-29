@@ -1,0 +1,26 @@
+include sideItems.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(rel="icon" type="image/svg+xml" href="/images/logo.svg")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title CRM-Dashboard
+  body
+    aside
+      nav
+        a.logo(href="./index.html")
+          svg.logo-svg(width="37", height="37")
+            use(href="./images/icons.svg#setting")
+          span.logo-text Dashboard
+          span v.01
+        ul
+          +side-item("./index.html", "key-square", "Dashboard", false)
+          +side-item("./index.html", "3d-square", "Product", true)
+          +side-item("./index.html", "user-square", "Customers", true)
+          +side-item("./index.html", "wallet-money", "Income", true)
+          +side-item("./index.html", "discount-shape", "Promote", true)
+          +side-item("./index.html", "message-question", "Help", true)
+
