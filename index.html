@@ -8,26 +8,125 @@
     <title>CRM-Dashboard</title>
   </head>
   <body>
+    <h1 class="page-title">Hello Evano 👋🏼,</h1>
+    <div>
+      <div>
+        <h2>All Customers</h2>
+        <p>Active Members</p>
+      </div>
+      <form class="search-form">
+        <label class="form-label">
+          <input
+            class="search-input"
+            type="text"
+            name="search"
+            placeholder="Search"
+        /></label>
+        <button class="search-btn" type="submit">
+          <svg class="btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Company</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jane Cooper</td>
+            <td>Microsoft</td>
+            <td>(225) 555-0118</td>
+            <td>jane@microsoft.com</td>
+            <td>United States</td>
+            <td><div class="active">Active</div></td>
+          </tr>
+          <tr>
+            <td>Floyd Miles</td>
+            <td>Yahoo</td>
+            <td>(205) 555-0100</td>
+            <td>floyd@yahoo.com</td>
+            <td>Kiribati</td>
+            <td><div class="inactive">Inactive</div></td>
+          </tr>
+          <tr>
+            <td>Ronald Richards</td>
+            <td>Adobe</td>
+            <td>(302) 555-0107</td>
+            <td>ronald@adobe.com</td>
+            <td>Israel</td>
+            <td><div class="inactive">Inactive</div></td>
+          </tr>
+          <tr>
+            <td>Marvin McKinney</td>
+            <td>Tesla</td>
+            <td>(252) 555-0126</td>
+            <td>marvin@tesla.com</td>
+            <td>Iran</td>
+            <td><div class="active">Active</div></td>
+          </tr>
+          <tr>
+            <td>Jerome Bell</td>
+            <td>Google</td>
+            <td>(629) 555-0129</td>
+            <td>jerome@google.com</td>
+            <td>Réunion</td>
+            <td><div class="active">Active</div></td>
+          </tr>
+          <tr>
+            <td>Kathryn Murphy</td>
+            <td>Microsoft</td>
+            <td>(406) 555-0120</td>
+            <td>kathryn@microsoft.com</td>
+            <td>Curaçao</td>
+            <td><div class="active">Active</div></td>
+          </tr>
+          <tr>
+            <td>Jacob Jones</td>
+            <td>Yahoo</td>
+            <td>(208) 555-0112</td>
+            <td>jacob@yahoo.com</td>
+            <td>Brazil</td>
+            <td><div class="active">Active</div></td>
+          </tr>
+          <tr>
+            <td>Kristin Watson</td>
+            <td>Facebook</td>
+            <td>(704) 555-0127</td>
+            <td>kristin@facebook.com</td>
+            <td>Åland Islands</td>
+            <td><div class="inactive">Inactive</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <aside>
       <nav>
-        <a class="logo" href="./index.html"
-          ><svg class="logo-svg" width="37" height="37">
+        <a class="logo" href="./index.html">
+          <svg class="logo-svg" width="37" height="37">
             <use href="./images/icons.svg#setting"></use>
           </svg>
-          <span class="logo-text">Dashboard</span><span>v.01</span></a
-        >
+          <span class="logo-text">Dashboard</span><span>v.01</span>
+        </a>
         <ul>
           <li>
-            <a class="nav-link" href="./index.html"
-              ><svg class="link-svg" width="24" height="24">
+            <a class="nav-link" href="./index.html">
+              <svg class="link-svg" width="24" height="24">
                 <use href="./images/icons.svg#key-square"></use>
               </svg>
-              <span class="link-text">Dashboard</span></a
-            >
+              <span class="link-text">Dashboard</span>
+            </a>
           </li>
           <li>
-            <a class="nav-link" href="./index.html"
-              ><svg class="link-svg" width="24" height="24">
+            <a class="nav-link" href="./index.html">
+              <svg class="link-svg" width="24" height="24">
                 <use href="./images/icons.svg#3d-square"></use>
               </svg>
               <span class="link-text">Product</span>
@@ -37,19 +136,19 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="./index.html"
-              ><svg class="link-svg" width="24" height="24">
+            <a class="nav-link" href="./index.html">
+              <svg class="link-svg" width="24" height="24">
                 <use href="./images/icons.svg#user-square"></use>
               </svg>
-              <span class="link-text">Customers</span
-              ><svg class="link-svg" width="16" height="16">
+              <span class="link-text">Customers</span>
+              <svg class="link-svg" width="16" height="16">
                 <use href="./images/icons.svg#arrow-rigt"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a class="nav-link" href="./index.html"
-              ><svg class="link-svg" width="24" height="24">
+            <a class="nav-link" href="./index.html">
+              <svg class="link-svg" width="24" height="24">
                 <use href="./images/icons.svg#wallet-money"></use>
               </svg>
               <span class="link-text">Income</span>
@@ -59,8 +158,8 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="./index.html"
-              ><svg class="link-svg" width="24" height="24">
+            <a class="nav-link" href="./index.html">
+              <svg class="link-svg" width="24" height="24">
                 <use href="./images/icons.svg#discount-shape"></use>
               </svg>
               <span class="link-text">Promote</span>

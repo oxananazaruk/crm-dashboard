@@ -1,4 +1,5 @@
 include sideItems.pug
+include customers.pug
 
 doctype html
 html(lang="en")
@@ -9,7 +10,37 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title CRM-Dashboard
   body
-    aside
+   h1.page-title Hello Evano 👋🏼,
+   div 
+    div 
+     h2 All Customers
+     p Active Members
+    form.search-form
+     label.form-label
+      input.search-input(type="text", name="search", placeholder="Search")
+     button.search-btn(type="submit")
+      svg.btn-icon(width="24" height="24")
+       use(href="./images/icons.svg#search")
+    table 
+     thead 
+      tr 
+       th Customer Name
+       th Company
+       th Phone Number
+       th Email
+       th Country
+       th Status
+     tbody 
+      +customer("Jane Cooper", "Microsoft", "(225) 555-0118", "jane@microsoft.com", "United States", "Active")
+      +customer("Floyd Miles", "Yahoo", "(205) 555-0100", "floyd@yahoo.com", "Kiribati", "Inactive")
+      +customer("Ronald Richards", "Adobe", "(302) 555-0107", "ronald@adobe.com", "Israel", "Inactive")
+      +customer("Marvin McKinney", "Tesla", "(252) 555-0126","marvin@tesla.com", "Iran", "Active")
+      +customer("Jerome Bell", "Google", "(629) 555-0129", "jerome@google.com", "Réunion", "Active")
+      +customer("Kathryn Murphy", "Microsoft", "(406) 555-0120", "kathryn@microsoft.com", "Curaçao", "Active")
+      +customer("Jacob Jones", "Yahoo", "(208) 555-0112", "jacob@yahoo.com", "Brazil", "Active")
+      +customer("Kristin Watson", "Facebook", "(704) 555-0127", "kristin@facebook.com", "Åland Islands", "Inactive")
+
+   aside
       nav
         a.logo(href="./index.html")
           svg.logo-svg(width="37", height="37")
@@ -17,10 +48,10 @@ html(lang="en")
           span.logo-text Dashboard
           span v.01
         ul
-          +side-item("./index.html", "key-square", "Dashboard", false)
-          +side-item("./index.html", "3d-square", "Product", true)
+          +side-item("#", "key-square", "Dashboard", false)
+          +side-item("", "3d-square", "Product", true)
           +side-item("./index.html", "user-square", "Customers", true)
-          +side-item("./index.html", "wallet-money", "Income", true)
-          +side-item("./index.html", "discount-shape", "Promote", true)
-          +side-item("./index.html", "message-question", "Help", true)
+          +side-item("", "wallet-money", "Income", true)
+          +side-item("", "discount-shape", "Promote", true)
+          +side-item("", "message-question", "Help", true)
 
