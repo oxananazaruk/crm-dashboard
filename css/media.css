@@ -1,0 +1,13 @@
+@media screen and (min-width: 1158px) {
+  .header {
+    display: none;
+  }
+
+  .side-bar {
+    display: block;
+  }
+
+  .main-wrapp {
+    display: flex;
+  }
+}
