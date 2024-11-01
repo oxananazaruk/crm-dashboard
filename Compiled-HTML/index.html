@@ -1,1 +1,364 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="icon" type="image/svg+xml" href="/images/logo.svg"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CRM-Dashboard</title></head><body><h1 class="page-title">Hello Evano 👋🏼,</h1><div> <div> <h2>All Customers</h2><p>Active Members</p></div><form class="search-form"><label class="form-label"><input class="search-input" type="text" name="search" placeholder="Search"></label><button class="search-btn" type="submit"><svg class="btn-icon" width="24" height="24"><use href="./images/icons.svg#search"></use></svg></button></form><table> <thead> <tr> <th>Customer Name</th><th>Company</th><th>Phone Number</th><th>Email</th><th>Country</th><th>Status</th></tr></thead><tbody> <tr> <td>Jane Cooper</td><td>Microsoft</td><td>(225) 555-0118</td><td>jane@microsoft.com</td><td>United States</td><td><div class="active">Active</div></td></tr><tr> <td>Floyd Miles</td><td>Yahoo</td><td>(205) 555-0100</td><td>floyd@yahoo.com</td><td>Kiribati</td><td><div class="inactive">Inactive</div></td></tr><tr> <td>Ronald Richards</td><td>Adobe</td><td>(302) 555-0107</td><td>ronald@adobe.com</td><td>Israel</td><td><div class="inactive">Inactive</div></td></tr><tr> <td>Marvin McKinney</td><td>Tesla</td><td>(252) 555-0126</td><td>marvin@tesla.com</td><td>Iran</td><td><div class="active">Active</div></td></tr><tr> <td>Jerome Bell</td><td>Google</td><td>(629) 555-0129</td><td>jerome@google.com</td><td>Réunion</td><td><div class="active">Active</div></td></tr><tr> <td>Kathryn Murphy</td><td>Microsoft</td><td>(406) 555-0120</td><td>kathryn@microsoft.com</td><td>Curaçao</td><td><div class="active">Active</div></td></tr><tr> <td>Jacob Jones</td><td>Yahoo</td><td>(208) 555-0112</td><td>jacob@yahoo.com</td><td>Brazil</td><td><div class="active">Active</div></td></tr><tr> <td>Kristin Watson</td><td>Facebook</td><td>(704) 555-0127</td><td>kristin@facebook.com</td><td>Åland Islands</td><td><div class="inactive">Inactive</div></td></tr></tbody></table></div><aside><nav><a class="logo" href="./index.html"><svg class="logo-svg" width="37" height="37"><use href="./images/icons.svg#setting"></use></svg><span class="logo-text">Dashboard</span><span>v.01</span></a><ul><li> <a class="nav-link" href="#"><svg class="link-svg" width="24" height="24"><use href="./images/icons.svg#key-square"></use></svg><span class="link-text">Dashboard</span></a></li><li> <a class="nav-link" href=""><svg class="link-svg" width="24" height="24"><use href="./images/icons.svg#3d-square"></use></svg><span class="link-text">Product</span><svg class="link-svg" width="16" height="16"><use href="./images/icons.svg#arrow-rigt"></use></svg></a></li><li> <a class="nav-link" href="./index.html"><svg class="link-svg" width="24" height="24"><use href="./images/icons.svg#user-square"></use></svg><span class="link-text">Customers</span><svg class="link-svg" width="16" height="16"><use href="./images/icons.svg#arrow-rigt"></use></svg></a></li><li> <a class="nav-link" href=""><svg class="link-svg" width="24" height="24"><use href="./images/icons.svg#wallet-money"></use></svg><span class="link-text">Income</span><svg class="link-svg" width="16" height="16"><use href="./images/icons.svg#arrow-rigt"></use></svg></a></li><li> <a class="nav-link" href=""><svg class="link-svg" width="24" height="24"><use href="./images/icons.svg#discount-shape"></use></svg><span class="link-text">Promote</span><svg class="link-svg" width="16" height="16"><use href="./images/icons.svg#arrow-rigt"></use></svg></a></li><li> <a class="nav-link" href=""><svg class="link-svg" width="24" height="24"><use href="./images/icons.svg#message-question"></use></svg><span class="link-text">Help</span><svg class="link-svg" width="16" height="16"><use href="./images/icons.svg#arrow-rigt"></use></svg></a></li></ul></nav></aside></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM-Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container main-nav">
+        <a class="logo" href="./index.html">
+          <svg class="logo-svg" width="24" height="24">
+            <use href="./images/icons.svg#setting"></use>
+          </svg>
+          <p class="logo-text">Dashboard<span class="logo-v">v.01</span></p>
+        </a>
+        <button class="menu-open-btn" type="button" data-menu-open>
+          <svg class="menu-open-icon" width="32" height="22">
+            <use href="./images/icons.svg#menu-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <nav class="menu-nav">
+            <ul class="mob-menu-list">
+              <li>
+                <a class="nav-link" href="./index.html">
+                  <div class="svg-wrapp">
+                    <svg class="link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#key-square"></use>
+                    </svg>
+                    <span class="link-text">Dashboard</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="./index.html">
+                  <div class="svg-wrapp">
+                    <svg class="link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#3d-square"></use>
+                    </svg>
+                    <span class="link-text">Product</span>
+                  </div>
+                  <span>&gt;</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="./index.html">
+                  <div class="svg-wrapp">
+                    <svg class="link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#user-square"></use>
+                    </svg>
+                    <span class="link-text">Customers</span>
+                  </div>
+                  <span>&gt;</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="./index.html">
+                  <div class="svg-wrapp">
+                    <svg class="link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#wallet-money"></use>
+                    </svg>
+                    <span class="link-text">Income</span>
+                  </div>
+                  <span>&gt;</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="./index.html">
+                  <div class="svg-wrapp">
+                    <svg class="link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#discount-shape"></use>
+                    </svg>
+                    <span class="link-text">Promote</span>
+                  </div>
+                  <span>&gt;</span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" href="./index.html">
+                  <div class="svg-wrapp">
+                    <svg class="link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#message-question"></use>
+                    </svg>
+                    <span class="link-text">Help</span>
+                  </div>
+                  <span>&gt;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="img-wrapp">
+            <div>
+              <img
+                srcset="./images/ellipse.jpg 1x, ./images/ellipse2x.jpg 2x"
+                src="./images/ellipse.jpg"
+                alt="Marketing"
+                width="42"
+                height="42"
+              />
+            </div>
+            <div class="name-wrapp">
+              <p class="name-text">Evano</p>
+              <p class="position-text">Project Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="side-container">
+          <aside class="side-bar">
+            <nav>
+              <a class="logo" href="./index.html">
+                <svg class="logo-svg" width="37" height="37">
+                  <use href="./images/icons.svg#setting"></use>
+                </svg>
+                <p class="logo-text">
+                  Dashboard<span class="logo-v">v.01</span>
+                </p>
+              </a>
+
+              <ul class="side-list">
+                <li>
+                  <a class="nav-link" href="./index.html">
+                    <div class="svg-wrapp">
+                      <svg class="link-svg" width="24" height="24">
+                        <use href="./images/icons.svg#key-square"></use>
+                      </svg>
+                      <span class="link-text">Dashboard</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="./index.html">
+                    <div class="svg-wrapp">
+                      <svg class="link-svg" width="24" height="24">
+                        <use href="./images/icons.svg#3d-square"></use>
+                      </svg>
+                      <span class="link-text">Product</span>
+                    </div>
+                    <span>&gt;</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="./index.html">
+                    <div class="svg-wrapp">
+                      <svg class="link-svg" width="24" height="24">
+                        <use href="./images/icons.svg#user-square"></use>
+                      </svg>
+                      <span class="link-text">Customers</span>
+                    </div>
+                    <span>&gt;</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="./index.html">
+                    <div class="svg-wrapp">
+                      <svg class="link-svg" width="24" height="24">
+                        <use href="./images/icons.svg#wallet-money"></use>
+                      </svg>
+                      <span class="link-text">Income</span>
+                    </div>
+                    <span>&gt;</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="./index.html">
+                    <div class="svg-wrapp">
+                      <svg class="link-svg" width="24" height="24">
+                        <use href="./images/icons.svg#discount-shape"></use>
+                      </svg>
+                      <span class="link-text">Promote</span>
+                    </div>
+                    <span>&gt;</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="./index.html">
+                    <div class="svg-wrapp">
+                      <svg class="link-svg" width="24" height="24">
+                        <use href="./images/icons.svg#message-question"></use>
+                      </svg>
+                      <span class="link-text">Help</span>
+                    </div>
+                    <span>&gt;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="img-wrapp">
+              <img
+                srcset="./images/ellipse.jpg 1x, ./images/ellipse2x.jpg 2x"
+                src="./images/ellipse.jpg"
+                alt="Marketing"
+                width="42"
+                height="42"
+              />
+              <div class="name-wrapp">
+                <p class="name-text">Evano</p>
+                <p class="position-text">Project Manager</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="customers-wrapp">
+          <div class="container">
+            <h1 class="page-title">Hello Evano 👋🏼,</h1>
+            <div class="table-wrapp">
+              <div>
+                <h2 class="table-title">All Customers</h2>
+                <p class="tb-title-text">Active Members</p>
+              </div>
+
+              <form class="search-form">
+                <label class="form-label">
+                  <input
+                    class="search-input"
+                    type="text"
+                    name="search"
+                    placeholder="Search"
+                  />
+                </label>
+                <button class="search-btn" type="submit">
+                  <svg class="btn-icon" width="24" height="24">
+                    <use href="./images/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+
+              <table class="customers-table">
+                <thead class="customers-table-head">
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Company</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Jane Cooper</td>
+                    <td data-label="Company">Microsoft</td>
+                    <td data-label="Phone Number">(225) 555-0118</td>
+                    <td data-label="Email">jane@microsoft.com</td>
+                    <td data-label="Country">United States</td>
+                    <td data-label="Status">
+                      <div class="active">Active</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Floyd Miles</td>
+                    <td data-label="Company">Yahoo</td>
+                    <td data-label="Phone Number">(205) 555-0100</td>
+                    <td data-label="Email">floyd@yahoo.com</td>
+                    <td data-label="Country">Kiribati</td>
+                    <td data-label="Status">
+                      <div class="inactive">Inactive</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Ronald Richards</td>
+                    <td data-label="Company">Adobe</td>
+                    <td data-label="Phone Number">(302) 555-0107</td>
+                    <td data-label="Email">ronald@adobe.com</td>
+                    <td data-label="Country">Israel</td>
+                    <td data-label="Status">
+                      <div class="inactive">Inactive</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Marvin McKinney</td>
+                    <td data-label="Company">Tesla</td>
+                    <td data-label="Phone Number">(252) 555-0126</td>
+                    <td data-label="Email">marvin@tesla.com</td>
+                    <td data-label="Country">Iran</td>
+                    <td data-label="Status">
+                      <div class="active">Active</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Jerome Bell</td>
+                    <td data-label="Company">Google</td>
+                    <td data-label="Phone Number">(629) 555-0129</td>
+                    <td data-label="Email">jerome@google.com</td>
+                    <td data-label="Country">Réunion</td>
+                    <td data-label="Status">
+                      <div class="active">Active</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Kathryn Murphy</td>
+                    <td data-label="Company">Microsoft</td>
+                    <td data-label="Phone Number">(406) 555-0120</td>
+                    <td data-label="Email">kathryn@microsoft.com</td>
+                    <td data-label="Country">Curaçao</td>
+                    <td data-label="Status">
+                      <div class="active">Active</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Jacob Jones</td>
+                    <td data-label="Company">Yahoo</td>
+                    <td data-label="Phone Number">(208) 555-0112</td>
+                    <td data-label="Email">jacob@yahoo.com</td>
+                    <td data-label="Country">Brazil</td>
+                    <td data-label="Status">
+                      <div class="active">Active</div>
+                    </td>
+                  </tr>
+                  <tr class="customer-card">
+                    <td data-label="Customer Name">Kristin Watson</td>
+                    <td data-label="Company">Facebook</td>
+                    <td data-label="Phone Number">(704) 555-0127</td>
+                    <td data-label="Email">kristin@facebook.com</td>
+                    <td data-label="Country">Åland Islands</td>
+                    <td data-label="Status">
+                      <div class="inactive">Inactive</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="table-info">
+                <p class="info-text">Showing data 1 to 8 of 256K entries</p>
+                <div class="pagination-wrapp">
+                  <a href="#">&lt;</a><a class="active-page" href="#">1</a
+                  ><a href="#">2</a><a href="#">3</a><a href="#">4</a
+                  ><span>...</span><a href="#">40</a><a href="#">&gt;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

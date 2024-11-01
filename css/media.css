@@ -7,7 +7,49 @@
     display: block;
   }
 
-  .main-wrapp {
+  .wrapper {
     display: flex;
+  }
+
+  .logo-text {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+
+  .side-container {
+    width: 306px;
+    padding: 36px 15px;
+  }
+
+  .side-list {
+    margin-top: 64px;
+  }
+
+  /* Table */
+  .customers-table {
+    display: table;
+    width: 100%;
+  }
+
+  .customers-table-head {
+    display: table-header-group;
+  }
+
+  .customer-card {
+    display: table-row;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .customer-card td {
+    display: table-cell;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .customer-card td::before {
+    content: none;
   }
 }

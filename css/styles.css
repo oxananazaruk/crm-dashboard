@@ -141,6 +141,15 @@ a {
   margin: 0 auto;
   color: var(--secondary-color);
   transition: background-color var(--transition), border var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.svg-wrapp {
+  display: flex;
+  gap: 14px;
+  align-items: center;
 }
 
 .nav-link:focus,
@@ -154,12 +163,6 @@ a {
   background-color: var(--color-hover);
   color: var(--invert-color);
   border: var(--border-hover);
-}
-
-.nav-link {
-  display: flex;
-  gap: 14px;
-  align-items: center;
 }
 
 .side-bar {
@@ -265,6 +268,10 @@ a {
   position: absolute;
   top: 7px;
   left: 8px;
+}
+
+.search-input:focus {
+  outline: none;
 }
 
 .customers-table {

@@ -1,9 +1,9 @@
 mixin side-item(link, icon, text, isArrow)
- li 
-  a.nav-link(href=link)
-   svg.link-svg(width="24", height="24")
-    use(href=`./images/icons.svg#${icon}`)
-   span.link-text #{text}
-   if isArrow
-    svg.link-svg(width="16", height="16")
-     use(href="./images/icons.svg#arrow-rigt")
+  li
+    a.nav-link(href=link)
+      div.svg-wrapp
+        svg.link-svg(width="24" height="24")
+          use(href=`./images/icons.svg#${icon}`)
+        span.link-text= text
+      if isArrow
+        span &gt;

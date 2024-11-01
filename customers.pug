@@ -1,9 +1,9 @@
 mixin customer(name, company, phone, email, country, status)
- tr 
-  td= name 
-  td= company 
-  td= phone
-  td= email 
-  td=country
-  td
-   div(class=status.toLowerCase())= status
+  tr.customer-card
+    td(data-label="Customer Name")= name
+    td(data-label="Company")= company
+    td(data-label="Phone Number")= phone
+    td(data-label="Email")= email
+    td(data-label="Country")= country
+    td(data-label="Status")
+     div(class=status.toLowerCase())= status
