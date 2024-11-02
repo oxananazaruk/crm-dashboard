@@ -1,6 +1,6 @@
-mixin side-item(link, icon, text, isArrow)
+mixin side-item(link, icon, text, isArrow, isCurrent)
   li
-    a.nav-link(href=link)
+    a.nav-link(href=link, class=isCurrent ? "current" : "")
       div.svg-wrapp
         svg.link-svg(width="24" height="24")
           use(href=`./images/icons.svg#${icon}`)

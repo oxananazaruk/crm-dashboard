@@ -1,32 +1,24 @@
-@media screen and (min-width: 1158px) {
-  .header {
-    display: none;
-  }
-
-  .side-bar {
-    display: block;
-  }
-
-  .wrapper {
-    display: flex;
-  }
-
-  .logo-text {
-    font-weight: 600;
-    font-size: 26px;
-    letter-spacing: 0.01em;
-  }
-
-  .side-container {
-    width: 306px;
-    padding: 36px 15px;
-  }
-
-  .side-list {
-    margin-top: 64px;
-  }
-
+@media screen and (min-width: 827px) {
   /* Table */
+
+  .page-title {
+    margin-bottom: 53px;
+  }
+  .form-wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .title-wrapp {
+    margin-bottom: 0;
+  }
+
+  .search-form {
+    margin-bottom: 0;
+  }
+
   .customers-table {
     display: table;
     width: 100%;
@@ -34,6 +26,23 @@
 
   .customers-table-head {
     display: table-header-group;
+  }
+
+  .table-head {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    color: var(--grey-color);
+  }
+
+  .table-head th {
+    padding-bottom: 14px;
+    border-bottom: var(--border-table);
+    text-align: left;
+  }
+
+  .table-head .th-status {
+    text-align: center;
   }
 
   .customer-card {
@@ -45,11 +54,93 @@
 
   .customer-card td {
     display: table-cell;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+    padding: 20px 0px;
+    border-bottom: var(--border-table);
   }
 
   .customer-card td::before {
     content: none;
+  }
+
+  .table-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .info-text {
+    margin-top: 0;
+  }
+
+  .pagination-wrapp {
+    gap: 12px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header {
+    display: none;
+  }
+
+  .side-bar {
+    display: block;
+  }
+
+  .wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  .logo-text {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+
+  .side-container {
+    width: 306px;
+    padding: 36px 28px 76px 28px;
+  }
+
+  .side-bar {
+    height: 100%;
+  }
+
+  .side-list {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .img-wrapp {
+    margin-top: 0;
+  }
+
+  .table-head {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .customer-card td {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .active {
+    padding: 4px 12px;
+  }
+
+  .inactive {
+    padding: 4px 12px;
   }
 }
