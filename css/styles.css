@@ -189,7 +189,7 @@ a {
 .link-svg {
   fill: currentColor;
   stroke: currentColor;
-  transition: fill var(--transition);
+  transition: fill var(--transition) stroke var(--transition);
 }
 
 .img-wrapp {
