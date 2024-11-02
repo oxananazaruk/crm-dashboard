@@ -58,6 +58,16 @@
     border-bottom: var(--border-table);
   }
 
+  .active {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .inactive {
+    margin: 0 auto;
+    text-align: center;
+  }
+
   .customer-card td::before {
     content: none;
   }

@@ -188,6 +188,7 @@ a {
 
 .link-svg {
   fill: currentColor;
+  stroke: currentColor;
   transition: fill var(--transition);
 }
 
